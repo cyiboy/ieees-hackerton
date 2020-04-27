@@ -138,7 +138,7 @@
               </li>	
             </ul>
             <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                <a class="navbar-brand brand-logo" href="index.html"><img src="images/Student.svg" alt="logo"/></a>
+                <a class="navbar-brand brand-logo" href="index.html"><img src="images/lecturer.svg" alt="logo"/></a>
                 <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo"/></a>
             </div>
             <ul class="navbar-nav navbar-nav-right">
@@ -181,7 +181,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                  <a href="course.html" class="nav-link">
+                  <a href="courseT.html" class="nav-link">
                     <i class="mdi mdi-cube-outline menu-icon"></i>
                     <span class="menu-title">Courses</span>
                     <i class="menu-arrow"></i>
@@ -189,14 +189,14 @@
                    
               </li>
               <li class="nav-item">
-                  <a href="Assigment.html" class="nav-link">
+                  <a href="AssigmentT.html" class="nav-link">
                     <i class="mdi mdi-chart-areaspline menu-icon"></i>
                     <span class="menu-title">Assigment</span>
                     <i class="menu-arrow"></i>
                   </a>
               </li>
               <li class="nav-item">
-                  <a href="Materials.html" class="nav-link">
+                  <a href="MaterialsT.html" class="nav-link">
                     <i class="mdi mdi-finance menu-icon"></i>
                     <span class="menu-title">Materials</span>
                     <i class="menu-arrow"></i>
@@ -226,14 +226,14 @@
           <div class="row">
 						<div class="col-sm-8 flex-column d-flex stretch-card">
 							<div class="row">
-							 
+                                   
 								<div class="col-lg-4 d-flex grid-margin stretch-card">
 									<div class="card sale-diffrence-border">
 										<div class="card-body">
 											<h2 class="text-dark mb-2 font-weight-bold">10 New</h2>
-											<h4 class="card-title mb-2">Online classes</h4>
+											<h4 class="card-title mb-2">upcoming Online classes</h4>
                       <small class="text-muted">APRIL 2019</small>
-                      <a href="course.html" class="stretched-link"></a> 
+                      <a href="courseT.html" class="stretched-link"></a> 
 
 										</div>
 									</div>
@@ -244,7 +244,7 @@
 											<h2 class="text-dark mb-2 font-weight-bold">4</h2>
 											<h4 class="card-title mb-2">Assigment</h4>
                       <small class="text-muted">33 APRIL 2019 deadline</small>
-                      <a href="Assigment.html" class="stretched-link"></a> 
+                      <a href="AssigmentT.html" class="stretched-link"></a> 
 										</div>
 									</div>
 								</div>
@@ -256,9 +256,8 @@
 						<div class="col-sm-6 mb-4 mb-xl-0">
 							<div class="d-lg-flex align-items-center">
 								<div>
-									<h3 class="text-dark font-weight-bold mb-2">Subscribed Courses</h3>
-									<h6 class="font-weight-normal mb-2">Subscribed for more. <a href="course.html" > View details</a></h6>
-								</div>
+									<h3 class="text-dark font-weight-bold mb-2">Your Courses</h3>
+								 	</div>
 							 
 							</div>
 						</div>
@@ -309,7 +308,8 @@
 		<script src="vendors/justgage/justgage.js"></script>
     <!-- Custom js for this page-->
     <script src="js/dashboard.js"></script>
-    <script>
+   <script>
+        
     var courses = [
       {
         "code":"Eng 301.1",
@@ -373,7 +373,7 @@ courses.forEach(Element => {
  
  var a = document.createElement('a')
  a.setAttribute("class", "stretched-link")
- a.setAttribute("href", "singlecourse.html")
+ a.setAttribute("href", "coursemain.html")
  var h4 = document.createElement('h4')
  h4.setAttribute("class", "card-title mb-2")
  h4.textContent = Element.title
@@ -400,5 +400,6 @@ courses.forEach(Element => {
 
  
     </script>
+    <!--  -->
   </body>
 </html>

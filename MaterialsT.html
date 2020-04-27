@@ -138,7 +138,7 @@
                   </li>	
                 </ul>
                 <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                    <a class="navbar-brand brand-logo" href="index.html"><img src="images/Student.svg" alt="logo"/></a>
+                    <a class="navbar-brand brand-logo" href="index.html"><img src="images/lecturer.svg" alt="logo"/></a>
                     <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo"/></a>
                 </div>
                 <ul class="navbar-nav navbar-nav-right">
@@ -175,13 +175,13 @@
             <div class="container">
               <ul class="nav page-navigation">
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">
+                  <a class="nav-link" href="teacher-dashbord.html">
                     <i class="mdi mdi-file-document-box menu-icon"></i>
                     <span class="menu-title">Dashboard</span>
                   </a>
                 </li>
                 <li class="nav-item">
-                    <a href="course.html" class="nav-link">
+                    <a href="courseT.html" class="nav-link">
                       <i class="mdi mdi-cube-outline menu-icon"></i>
                       <span class="menu-title">Courses</span>
                       <i class="menu-arrow"></i>
@@ -189,14 +189,14 @@
                      
                 </li>
                 <li class="nav-item">
-                    <a href="Assigment.html" class="nav-link">
+                    <a href="AssigmentT.html" class="nav-link">
                       <i class="mdi mdi-chart-areaspline menu-icon"></i>
                       <span class="menu-title">Assigment</span>
                       <i class="menu-arrow"></i>
                     </a>
                 </li>
                 <li class="nav-item active">
-                    <a href="Materials.html" class="nav-link">
+                    <a href="MaterialsT.html" class="nav-link">
                       <i class="mdi mdi-finance menu-icon"></i>
                       <span class="menu-title">Materials</span>
                       <i class="menu-arrow"></i>
@@ -215,6 +215,9 @@
                         <div class="main-panel">
                                 <div class="content-wrapper">
                                   <div>
+                                        <button type="button" id="Subscribe"onclick="subd()" class="btn btn-danger btn-lg btn-block  mb-4 "  data-toggle="modal" data-target="#exampleModal">Upload Materials</button>
+                  
+                                   
                                     <h3 class="text-dark font-weight-bold mb-2">Materials</h3>
                                     </div>
                                         <div class="col-md-12 grid-margin stretch-card">
@@ -321,7 +324,66 @@
               </div>
 
             
-            
+                
+                
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Upload Material</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                                <form class="forms-sample">
+                                        <div class="form-group">
+                                          <label for="exampleInputName1">Course title</label>
+                                          <input type="text" class="form-control" id="exampleInputName1" placeholder="title">
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="exampleInputEmail3">Course code</label>
+                                          <input type="text" class="form-control" id="exampleInputEmail3" placeholder="code">
+                                        </div>
+                                        <div class="form-group">Topic</label>
+                                          <input type="faculty" class="form-control" id="exampleInputPassword4" placeholder="Topic">
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="exampleSelectGender">Level</label>
+                                            <select class="form-control" id="exampleSelectGender">
+                                                  <option>Level</option>
+                                                  <option>100 level</option>
+                                                  <option>200 level</option>
+                                                  <option>300 level</option>
+                                                  <option>400 level</option>
+                                                  <option>500 level</option>
+                                            </select>
+                                          </div>
+                                          <div class="form-group">
+                                                  <label for="exampleTextarea1">Material</label>
+                                                  <textarea class="form-control" id="exampleTextarea1" placeholder="Description" rows="4"></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                        <label>upload Materials</label>
+                                                        <input type="file" name="img[]" class="file-upload-default">
+                                                        <div class="input-group col-xs-12">
+                                                          <input type="text" class="form-control file-upload-info" disabled placeholder="Upload ">
+                                                          <span class="input-group-append">
+                                                            <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
+                                                          </span>
+                                                        </div>
+                                                      </div>
+                                         
+                                        
+                                      </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Upload</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>  
            
         </div>
           

@@ -12,7 +12,6 @@
         <!-- End plugin css for this page -->
         <!-- inject:css -->
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/styles.css">
         <!-- endinject -->
         <link rel="shortcut icon" href="images/favicon.png" />
       </head>
@@ -138,7 +137,7 @@
                   </li>	
                 </ul>
                 <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-                    <a class="navbar-brand brand-logo" href="index.html"><img src="images/Student.svg" alt="logo"/></a>
+                    <a class="navbar-brand brand-logo" href="index.html"><img src="images/lecturer.svg" alt="logo"/></a>
                     <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo"/></a>
                 </div>
                 <ul class="navbar-nav navbar-nav-right">
@@ -175,13 +174,13 @@
             <div class="container">
               <ul class="nav page-navigation">
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">
+                  <a class="nav-link" href="teacher-dashbord.html">
                     <i class="mdi mdi-file-document-box menu-icon"></i>
                     <span class="menu-title">Dashboard</span>
                   </a>
                 </li>
                 <li class="nav-item active">
-                    <a href="course.html" class="nav-link">
+                    <a href="courseT.html" class="nav-link">
                       <i class="mdi mdi-cube-outline menu-icon"></i>
                       <span class="menu-title">Courses</span>
                       <i class="menu-arrow"></i>
@@ -189,7 +188,7 @@
                      
                 </li>
                 <li class="nav-item">
-                    <a href="Assigment.html" class="nav-link">
+                    <a href="AssigmentT.html" class="nav-link">
                       <i class="mdi mdi-chart-areaspline menu-icon"></i>
                       <span class="menu-title">Assigment</span>
                       <i class="menu-arrow"></i>
@@ -210,75 +209,36 @@
         </div>
         <!-- partial -->
             <div class="container-fluid page-body-wrapper">
-              
-              <div class="main-panel">
-                <div class="content-wrapper">
-                    
-                    <div class="row col-md-12"> 
-                        <div class="col-md-8 grid-margin stretch-card">
-                          <div class="card">
-                              
-                            <div class="card-body ">
-                              <h2 class="card-title">TECHNICAL WRITING AND PRESENTATION ( 301.2 )</h2>
-                              <video width="100%" controls>
-                                <source src="mov_bbb.mp4" type="video/mp4">
-                                 
-                                Your browser does not support HTML5 video.
-                              </video>
-                              <div class="mt-2" ><b>Topic: PRESENTATION  </b></div>
+                <div class="main-panel">
+                    <div class="content-wrapper">
+                            <button type="button" id="Subscribe"onclick="sub()" class="btn btn-dark btn-lg btn-block  mb-4 ">Create a new course</button>
+                  
+                        <div class="row">
                             
-                              <p class="card-description">
-                                  
-                                  Fluid Mechanics is the study of fluids at rest (fluid statics) and in motion (fluid dynamics). ... Whereas a solid can resist an applied force by static deformation. Deformation of a solid and a fluid exposed to an applied force. Liquids, gases, plasmas and, to some extent, plastic solids are accepted to be fluids.  </p>
-                        
-                                </div>
-
-                             
-                          </div>
-                        </div><!-- Card -->
-                        <div class="col-md-4 grid-margin stretch-card">
-                          <div class="card">
-                            <div class="card-body " style="
-                            padding-left: 0px;
-                            padding-right: 0px;
-                        ">
-                              <h2 class="card-title ml-3">Chat</h2>
-                              <div class="container">
+                          <div class="container">
+                            <input class="form-control" id="listSearch" type="text" onkeyup="myFunction()" placeholder="Search by course code e.g ENG207">
+                            <br>
+                            <ul class="list-group " id="myList">
+                                
                               
-                                <div class="messaging">
-                                      <div class="inbox_msg">
-                                        
-                                        <div class="mesgs" >
-                                          <div id="msg_history" class="msg_history">
-                                            
-                                          </div>
-                                          <div class="type_msg" >
-                                            <div class="input_msg_write">
-                                              <div class="row">
-                                                  <input  type="text" id="int_btn" class="write_msg col-md-9" placeholder="Type a message" />
-                                                  <button   type="button" onclick="sub()" class="btn btn-info col-md-2.5 mt-2 mb-2 ">send</button>
-                                                
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      
-                                        </div></div>
-
-                            </div>
-                          </div>
-                           
-                         
-                        
-                        </div>
-                        <!-- Card -->
-
-                        </div>
-                      </div>
+                             
+                            </ul>
+                          </div>   
               </div>
-
             
+                         
+                    </div>
+                   
+                    <footer class="footer">
+              <div class="footer-wrap">
+                  <div class="w-100 clearfix">
+                    <span class="d-block text-center text-sm-left d-sm-inline-block">Copyright © 2018 <a href="https://www.bootstrapdash.com/" target="_blank">bootstrapdash</a>. All rights reserved.</span>
+                    <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="mdi mdi-heart-outline"></i></span>
+                  </div>
+              </div>
+            </footer>
+                 
+                </div>
                 
             </div>
            
@@ -295,99 +255,136 @@
             <script src="vendors/justgage/justgage.js"></script>
       
         <script src="js/dashboard.js"></script>
-     <script>
-
-var message = [{
-        "Message":"hello worold first tesr",
-        "from":"outside",
-
-        "date":"2012-20-20"
+        <script>
+var courses = [
+      {
+        "code":"Eng 301.1",
+        "title":"Engineering Materials",
+        "upated":"24 may 2020"
+      },
+      {
+        "code":"ECE302.1",
+        "title":"ELECTRICAL MEASUREMENTS & INSTRUMENTATION",
+        "upated":"24 may 2020"
+      },
+      {
+        "code":"ECE304.1",
+        "title":"PHYSICAL ELECTRONICS",
+        "upated":"24 may 2020"
+      },
+      {
+        "code":"ECE305.1",
+        "title":"COMMNICATION PRINCIPLE",
+        "upated":"24 may 2020"
+      },
+      {
+        "code":"ECE306.1",
+        "title":"ELECTRICAL POWER PRINCIPLE",
+        "upated":"24 may 2020"
+      },
+      {
+        "code":"	ECE307.1",
+        "title":"ELECTRONIC CIRCUIT LABORATORY",
+        "upated":"24 may 2020"
+      },
+      {
+        "code":"ENG210.1",
+        "title":"BASIC ELECTRICAL ENGINEERING",
+        "upated":"24 may 2020"
+      },
+      {
+        "code":"ENG301.1",
+        "title":"ENGINEERING MATHEMATICS IV",
+        "upated":"24 may 2020"
+      },
+      {
+        "code":"	ENG302.1",
+        "title":"TECHNICAL WRITING AND PRESENTATION",
+        "upated":"24 may 2020"
       }
+    ];
+    
+    var app = document.getElementById("myList")
+    var div = document.createElement('div')
+  div.setAttribute('class', 'row')
+  div.setAttribute('id','div1')
+courses.forEach(Element => {
+
+ var div1 = document.createElement('p')
+ div1.setAttribute("class", "col-lg-2 d-flex grid-margin stretch-card")
+ div1.setAttribute('id','div')
+ div1.textContent = Element.code
+ div1.setAttribute('style', 'font-size: 0;')
+ var div2 = document.createElement('div')
+ div2.setAttribute("class", "card sale-diffrence-border")
+ var div3 = document.createElement('div')
+ div3.setAttribute("class", "card-body")
+ var h2 = document.createElement('h2')
+ h2.setAttribute("class", "text-dark mb-2 font-weight-bold")
+ h2.textContent = Element.code
+
+ var h4 = document.createElement('h4')
+ h4.setAttribute("class", "card-title mb-2")
+ h4.textContent = Element.title
+
+ var a = document.createElement('a')
+ a.setAttribute("class", "stretched-link")
+ a.setAttribute("href", "coursemain.html")
+ var small = document.createElement('small')
+ small.setAttribute("class", "text-muted")
+ small.textContent = Element.upated
+var li = document.createElement('li')
+li.textContent = Element.code
+
+//li.style.display = 'none'
+
+ app.appendChild(div)
  
-      
-      ]
+ div.appendChild(div1)
+ //li.appendChild(div1)
+ div1.appendChild(div2)
+ div2.appendChild(div3)
+ div3.appendChild(h2)
+ div3.appendChild(h4)
+ div3.appendChild(small)
+ div3.appendChild(a)
+ 
+
+})
 
 
-   
+/* 
+function myFunction() {
+  var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("listSearch");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myList");
+    li2 = document.getElementById("div1");
+ //   console.log(li2)
+   li = li2.getElementsByTagName("p");
 
-     
-     var msg_history = document.getElementById('msg_history')
-   
-      message.forEach(Element => {
-
-       var div_msg = document.createElement('div')
-       if( Element.from === 'sent'){
-        div_msg.setAttribute('class', 'outgoing_msg')
-       }else{
-        div_msg.setAttribute('class', 'incoming_msg mt-2')
-       }
-       
-
-       var div_from = document.createElement('div')
-       if( Element.from === 'sent'){
-        div_from.setAttribute('class','sent_msg' )    
-     
-       }else{
-        div_from.setAttribute('class','received_withd_msg' )    
-     
-       }
-       
-       var p = document.createElement('p')          
-       p.textContent=  Element.Message   
-       var span = document.createElement('span') 
-       span.setAttribute('class', 'time_date')
-       if(Element.from === 'sent'){
-        span.setAttribute('align', 'right')
-       }
-       span.textContent= Element.date    
-
-       msg_history.appendChild(div_msg)
-       div_msg.appendChild(div_from)
-       div_from.appendChild(p)
-       div_from.appendChild(span)
-      })  
-       function sub(){
-         var input = document.getElementById('int_btn')
-         var currentdate = new Date();
-         var datetime =  currentdate.getDate() + "/"
-                + (currentdate.getMonth()+1)  + "/" 
-                + currentdate.getFullYear() + " @ "  
-                + currentdate.getHours() + ":"  
-                + currentdate.getMinutes() + ":" 
-                + currentdate.getSeconds();
-         message.push({
-        "Message": input.value,
-        "from":"sent",
-
-        "date": datetime
-      })
-
-       
-
-       var div_msg = document.createElement('div')
-       
-        div_msg.setAttribute('class', 'outgoing_msg')
-          var div_from = document.createElement('div')
-             div_from.setAttribute('class','sent_msg' )    
-         var p = document.createElement('p')          
-       p.textContent=  input.value 
-       var span = document.createElement('span') 
-       span.setAttribute('class', 'time_date')
-        span.setAttribute('align', 'right')
-     
-       span.textContent= datetime   
-
-       msg_history.appendChild(div_msg)
-       div_msg.appendChild(div_from)
-       div_from.appendChild(p)
-       div_from.appendChild(span)
+     for (i = 0; i < li.length; i++) {
+ 
+        a = li[i].getElementsByTagName('h2')[0]
+        txtValue =    a.textContent
+       // console.log(txtValue)
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+            console.log("true")
+        } else {
+            li[i].style.display = "none";
+            console.log("fa")
+        }
 
 
+    } 
+}
+*/
 
-      console.log(message)
-      input.value = ''
-       }
-                 
-     </script>
+
+function sub(){
+    window.location.href = "create course.html";
+}
+        </script>
       </body>
 </html>
